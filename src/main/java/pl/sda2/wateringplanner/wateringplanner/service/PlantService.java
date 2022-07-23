@@ -12,16 +12,12 @@ public interface PlantService {
 
     void deleteByName(String flowerName);
 
-
     void deleteById(Integer Id);
 
-    void update(Plant plant);
+    void waterIt(Integer plantId);
 
     Plant getById(Integer id);
 
     Plant getByName(String flowerName);
-
-
-    Plant getByFlowerName(String flowerName);
 }
 

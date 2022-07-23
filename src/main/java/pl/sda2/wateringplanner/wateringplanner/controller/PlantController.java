@@ -10,14 +10,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.sda2.wateringplanner.wateringplanner.model.Plant;
 import pl.sda2.wateringplanner.wateringplanner.service.PlantService;
+import pl.sda2.wateringplanner.wateringplanner.service.PlantServiceInMemory;
 
 
 @Slf4j
 @Controller
-
 public class PlantController {
     private final PlantService plantService;
-    public PlantController(PlantService plantService) {this.plantService = plantService;}
+
+    public PlantController() {
+        this.plantService = new PlantServiceInMemory();
+    }
 
     @GetMapping("/plants/list")
     public String plantList(ModelMap modelMap) {

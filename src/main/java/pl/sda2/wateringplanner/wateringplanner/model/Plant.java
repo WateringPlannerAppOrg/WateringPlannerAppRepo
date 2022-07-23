@@ -1,37 +1,20 @@
 package pl.sda2.wateringplanner.wateringplanner.model;
-
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.time.LocalDate;
 
-
-@Data
+@AllArgsConstructor
 @NoArgsConstructor
-@Entity
-
+@Getter
 public class Plant {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
     private Integer id;
-
-    private String flowerSpecies;
-
-    private String flowerName;
-
-    private String caringFlowerDescription;
-
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    private LocalDate bringHomeTime;
-
+    private String species;
+    private String name;
+    private String caringDescription;
+    private LocalDate bringHomeDate;
 }
 
 
