@@ -1,0 +1,40 @@
+!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Plants details</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Plant Name</th>
+        <th scope="col">Plant Unique Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">Last Watering Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <td th:text="${plant.id}"/>
+    <td th:text="${plant.photo}"/>
+    <td th:text="${plant.name}"/>
+    <td th:text="${plant.uniqueName}"/>
+    <td th:text="${plant.description}"/>
+    <td th:text="${plant.startDate}"/>
+    <td th:text="${plant.lastWateringDate}"/>
+    </tbody>
+</table>
+
+<a th:href="@{/index}">Go to Start Page</a>
+
+
+
+
+
+</body>
+</html>
