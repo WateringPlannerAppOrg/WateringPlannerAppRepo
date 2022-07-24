@@ -1,40 +1,22 @@
 package pl.sda2.wateringplanner.wateringplanner.model;
-
-
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import javax.persistence.*;
 
 import java.time.LocalDate;
 
-@Data
+@AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Getter
 public class Plant {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-
-    private String photo;
-
-
+    private String species;
     private String name;
-
-
-    private String uniqueName;
-
-    @Column(length = 1000)
-    private String description;
-
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    private LocalDate startDate;
-
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    private LocalDate lastWateringDate;
-
-
+    private String caringDescription;
+    private LocalDate bringHomeDate;
+    boolean wet;
+    public void waterIt() {
+        this.wet = true;
+    }
 }

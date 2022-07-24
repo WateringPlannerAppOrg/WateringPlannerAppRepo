@@ -9,5 +9,4 @@ public class WateringPlannerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WateringPlannerApplication.class, args);
 	}
-
 }
