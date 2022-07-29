@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Plants details</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!--<h1>Your Plants List</h1>-->
+<!--<div class="container">-->
+<!--    <div class="title"></div>-->
+<!--    <div class="menu"></div>-->
+<!--    <div class="MainPage"></div>-->
+<!--    <div class="footer"></div>-->
+<!--</div>-->
+<div class="container">
+    <div class="title"><h1>Watering Plants</h1> </div>
+    <div class="menu">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Plant Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Plant Management</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="MainPage" >
+<table class="table  table-striped">
+    <thead class="table-dark bg-dark">
+    <tr>
+        <th scope="col">Flower Name</th>
+        <th scope="col">Watering Level</th>
+        <th scope="col">Last Watering</th>
+        <th scope="col">Next Watering Date</th>
+        <!--        <th scope="col">Watering Date</th>-->
+<!--        <th class="btn btn-light"  role="button">Watering</th>-->
+        <th scope="col">Watering It!</th>
+    </tr>
+    </thead>
+
+    <tbody class="table-info">
+
+
+<!--    <td th:text="${plant.id}"/>-->
+<!--    <td th:text="${plant.flowerSpecies}"/>-->
+    <td th:text="${plants.name}"/>
+<!--    <td th:text="${plant.caringFlowerDescription}"/>-->
+    <td>'HI_LOW_ICON'</td>
+<td th:text="${plants.lastWateringDate}"/>
+    <td th:text="${plants.NextWateringDate}"/>
+<!--    <td th:text="${plant.Watering}"/>-->
+    <td class="btn btn-outline-primary btn-sm"  role="button">Watering</td>
+
+    </tbody>
+</table>
+    </div>
+    <div class="footer">
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+<!--<a href="WateringPlannerAppRepo/index.html" th:href="@{/}">Return to home</a>
+
+<button type="button" class="btn btn-dark">Dark</button>-->
+
+
+
+<!--<a class="btn btn-dark" href="WateringPlannerAppRepo/index.html" role="button">Home</a>-->
+
+
+</body>
+</html>

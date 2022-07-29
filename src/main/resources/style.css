@@ -1,0 +1,21 @@
+.container {  display: grid;
+  grid-template-columns: 0.9fr 1.2fr 0.9fr;
+  grid-template-rows: 0.3fr 0.2fr 1.8fr 0.2fr 2.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-content: center;
+  grid-template-areas:
+    ". title ."
+    ". menu ."
+    ". MainPage ."
+    ". footer ."
+    ". . .";
+}
+
+.title { grid-area: title; }
+
+.menu { grid-area: menu; }
+
+.MainPage { grid-area: MainPage; }
+
+.footer { grid-area: footer; }
