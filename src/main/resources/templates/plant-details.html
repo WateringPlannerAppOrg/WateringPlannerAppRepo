@@ -6,7 +6,24 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Your Plants List</h1>
+<div class="container">
+    <div class="title"><h1>Plants Details</h1> </div>
+    <div class="menu">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" th:href="@{/plants/list}">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/plants/details}">Plant Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " th:href="@{/plants/create}" tabindex="-1">Plant Management</a>
+            </li>
+        </ul>
+
+    </div>
 
 
 

@@ -7,27 +7,21 @@
 </head>
 <body>
 
-<!--<h1>Your Plants List</h1>-->
-<!--<div class="container">-->
-<!--    <div class="title"></div>-->
-<!--    <div class="menu"></div>-->
-<!--    <div class="MainPage"></div>-->
-<!--    <div class="footer"></div>-->
-<!--</div>-->
+
 <div class="container">
     <div class="title"><h1>Watering Plants</h1> </div>
     <div class="menu">
 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" th:href="@{/plants/list}">Home</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Plant Details</a>
+                <a class="nav-link" th:href="@{/plants/details}">Plant Details</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Plant Management</a>
+                <a class="nav-link " th:href="@{/plants/create}" tabindex="-1">Plant Management</a>
             </li>
         </ul>
 
@@ -36,6 +30,7 @@
 <table class="table  table-striped">
     <thead class="table-dark bg-dark">
     <tr>
+        <th scope="col">Id</th>
         <th scope="col">Flower Name</th>
         <th scope="col">Watering Level</th>
         <th scope="col">Last Watering</th>
@@ -47,17 +42,25 @@
     </thead>
 
     <tbody class="table-info">
+    <tr th:each="plant: ${plants}">
+        <td th:text="${plant.id}"/>
+        <td th:text="${plant.name}" />
+        <td>'HI_LOW_ICON'</td>
+        <td th:text="${plant.caringDescription}" />
+        <td th:text="${plant.wet}" />
+        <td class="btn btn-outline-primary btn-sm"  role="button">Watering</td>
 
 
-<!--    <td th:text="${plant.id}"/>-->
-<!--    <td th:text="${plant.flowerSpecies}"/>-->
+    </tr>
+
+<!--    <td th:text="${plant.id}"/>
+&lt;!&ndash;    <td th:text="${plant.flowerSpecies}"/>
     <td th:text="${plants.name}"/>
-<!--    <td th:text="${plant.caringFlowerDescription}"/>-->
-    <td>'HI_LOW_ICON'</td>
+<td th:text="${plant.caringFlowerDescription}"/>
+
 <td th:text="${plants.lastWateringDate}"/>
-    <td th:text="${plants.NextWateringDate}"/>
-<!--    <td th:text="${plant.Watering}"/>-->
-    <td class="btn btn-outline-primary btn-sm"  role="button">Watering</td>
+    <td th:text="${plant.Watering}"/>-->
+
 
     </tbody>
 </table>

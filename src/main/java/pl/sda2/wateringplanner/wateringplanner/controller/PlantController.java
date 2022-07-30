@@ -28,6 +28,12 @@ public class PlantController {
         return "plant-list";
     }
 
+    @GetMapping("/plants/details")
+    public String plantDetal(ModelMap modelMap) {
+        modelMap.addAttribute("plants", plantService.getAll());
+        return "plant-details";
+    }
+
     @GetMapping("/plants/create")
     public String showCreatePlantForm (ModelMap modelMap ) {
         modelMap.addAttribute("empty Plant", new Plant());

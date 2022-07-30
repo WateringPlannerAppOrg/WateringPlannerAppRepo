@@ -13,11 +13,15 @@ public class PlantServiceInMemory implements PlantService {
 
     public PlantServiceInMemory() {
         plants.add(new Plant(1, "Dracena", "Moja Dracenka",
-                "Podlewanie 1-2 w tyg.",
+                "dużo, 1 w tyg.",
                 LocalDate.now(), true
         ));
         plants.add(new Plant(2, "Dracena", "Dracena w przedpokoju",
-                "Podlewanie 1-2 w tyg.",
+                "mało 2 w tyg.",
+                LocalDate.now(), false
+        ));
+        plants.add(new Plant(3, "Katus", "mały Katus",
+                "mało 1 w tyg.",
                 LocalDate.now(), false
         ));
     }
