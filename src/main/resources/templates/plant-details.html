@@ -24,7 +24,58 @@
         </ul>
 
     </div>
+    <div class="MainPage" >
+        <table class="table  table-striped">
+            <thead class="table-dark bg-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Flower Spec</th>
+                <th scope="col">Flower Photo</th>
+                <th scope="col">Flower Name</th>
+                <th scope="col">Flower Description</th>
+                <th scope="col">In Home at</th>
+                <!--<th scope="col">Next Watering Date</th>
+                &lt;!&ndash;        <th scope="col">Watering Date</th>&ndash;&gt;
+                &lt;!&ndash;        <th class="btn btn-light"  role="button">Watering</th>&ndash;&gt;
+                <th scope="col">Watering It!</th>-->
+            </tr>
+            </thead>
 
+            <tbody class="table-info">
+            <tr th:each="plant: ${plants}">
+                <td th:text="${plant.id}"/>
+                <td th:text="${plant.species}" />
+                <td><img th:src="@{/images/dracena.png}" class="img-thumbnail" alt="Plant Photo" height="100"/></td>
+
+                <td th:text="${plant.name}" />
+                <td th:text="${plant.caringDescription}" />
+                <td th:text="${plant.bringHomeDate}" />
+                <!--<td class="btn btn-outline-primary btn-sm"  role="button">Watering</td>-->
+
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="footer">
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    </div>
 
 
 </body>

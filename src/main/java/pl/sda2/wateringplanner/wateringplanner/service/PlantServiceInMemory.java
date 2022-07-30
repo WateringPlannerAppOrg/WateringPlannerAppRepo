@@ -14,15 +14,15 @@ public class PlantServiceInMemory implements PlantService {
     public PlantServiceInMemory() {
         plants.add(new Plant(1, "Dracena", "Moja Dracenka",
                 "dużo, 1 w tyg.",
-                LocalDate.now(), LocalDate.of(2022,07,22),LocalDate.of(2022,07,26),true
+                LocalDate.of(2021, 06, 10), LocalDate.of(2022,07,22),LocalDate.of(2022,07,26),true
         ));
         plants.add(new Plant(2, "Dracena", "Dracena w przedpokoju",
                 "mało 2 w tyg.",
-                LocalDate.now(), LocalDate.of(2022,07,22),LocalDate.of(2022,07,24),false
+                LocalDate.of(2020, 12, 24), LocalDate.of(2022,07,22),LocalDate.of(2022,07,24),false
         ));
-        plants.add(new Plant(3, "Katus", "mały Katus",
+        plants.add(new Plant(3, "Katus", "mały Kaktus",
                 "mało 1 w tyg.",
-                LocalDate.now(), LocalDate.of(2022,07,24),LocalDate.of(2022,07,29),false
+                LocalDate.of(2022,07,13), LocalDate.of(2022,07,24),LocalDate.of(2022,07,29),false
         ));
     }
 
