@@ -15,6 +15,8 @@ public class Plant {
     private String name;
     private String caringDescription;
     private LocalDate bringHomeDate;
+    private LocalDate lastWatering;
+    private LocalDate nextWatering;
     boolean wet;
     public void waterIt() {
         this.wet = true;
