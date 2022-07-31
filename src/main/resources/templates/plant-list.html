@@ -48,12 +48,14 @@
         <td>'HI_LOW_ICON'</td>
         <td th:text="${plant.lastWatering}" />
         <td th:text="${plant.nextWatering}" />
-        <td class="btn btn-outline-primary btn-sm"  role="button">WATERING</td>
+        <td
 
-        <!--<form action="#" th:action="@{/water/{id}}" method="post">
-            <input type="submit" value="Submit" />
-        </form>-->
 
+
+        <form action="#" th:action="@{/water/{id}}" method="post">
+            <input type="submit" class="btn btn-outline-primary btn-sm" value="WATERING" />
+        </form>
+        </td>
     </tr>
 
     </tbody>

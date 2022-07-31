@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 <div class="container">
   <div class="title"><h1>Plants Management</h1> </div>
@@ -12,49 +13,78 @@
 
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" th:href="@{/plants/list}">Home</a>
+        <a class="nav-link" aria-current="page" th:href="@{/plants/list}">Home</a>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" th:href="@{/plants/details}">Plant Details</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " th:href="@{/plants/create}" tabindex="-1">Plant Management</a>
+        <a class="nav-link active" th:href="@{/plants/create}" tabindex="-1">Plant Management</a>
       </li>
     </ul>
     <div class="title"><h4>Add New Plants</h4> </div>
   </div>
   <div class="MainPage" >
-    <table class="table  table-striped">
-      <thead class="table-dark bg-dark">
-      <tr>
-        <!--<th scope="col">Id</th>-->
-        <th scope="col">Flower Species</th>
-        <th scope="col">Flower Name</th>
-        <th scope="col">Bring Home</th>
-        <th scope="col">Watering Level</th>
-        <th scope="col">Watering frequency</th>
-        <th scope="col">Add Flower</th>
-        <!--<th class="btn btn-light"  role="button">Watering</th>&ndash;&gt;
-        <th scope="col">Watering It!</th>-->
-      </tr>
-      </thead>
 
-      <tbody class="table-info">
-      <tr th:each="plant: ${plants}">
-        <td input type="text" name="Flower Species" th:field="*{species}"/>
-        <td input type ="text" th:field="*{name}" />
-        <td input type = "date" th:field="*{plant.name}" />
-        <!--<td>'HI_LOW_ICON'</td>-->
-        <td input type ="text" name="LEVEL" />
-        <td tinput type = "text" th:text="${plant.nextWatering}" />
-        <td class="btn btn-outline-primary btn-sm"  role="button">ADD</td>
+    <form>
+      <div class="row mb-3">
+        <label for="inputSpecies" class="col-sm-2 col-form-label">Species</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputSpecies">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputName">
+        </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="inputDesription" class="col-sm-2 col-form-label">Description</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputDesription">
+          </div>
+
+        </div>
+          <div class="row mb-3">
+            <label for="bringDate" class="col-sm-2 col-form-label">Caring Date</label>
+            <div class="col-sm-4">
+              <input type="date" class="form-control" id="bringDate">
+            </div>
+
+      </div>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Watering Level</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              Low
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Medium
+            </label>
+          </div>
+          <div class="form-check ">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+            <label class="form-check-label" for="gridRadios3">
+              High
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary">ADD Flower</button>
+    </form>
 
 
-      </tr>
 
-      </tbody>
-    </table>
+
+
   </div>
 </body>
 </html>

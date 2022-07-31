@@ -12,11 +12,11 @@
 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" th:href="@{/plants/list}">Home</a>
+                <a class="nav-link " aria-current="page" th:href="@{/plants/list}">Home</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/plants/details}">Plant Details</a>
+                <a class="nav-link active" th:href="@{/plants/details}">Plant Details</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " th:href="@{/plants/create}" tabindex="-1">Plant Management</a>
@@ -34,10 +34,7 @@
                 <th scope="col">Flower Name</th>
                 <th scope="col">Flower Description</th>
                 <th scope="col">In Home at</th>
-                <!--<th scope="col">Next Watering Date</th>
-                &lt;!&ndash;        <th scope="col">Watering Date</th>&ndash;&gt;
-                &lt;!&ndash;        <th class="btn btn-light"  role="button">Watering</th>&ndash;&gt;
-                <th scope="col">Watering It!</th>-->
+
             </tr>
             </thead>
 
@@ -45,12 +42,11 @@
             <tr th:each="plant: ${plants}">
                 <td th:text="${plant.id}"/>
                 <td th:text="${plant.species}" />
-                <td><img th:src="@{/images/dracena.png}" class="img-thumbnail" alt="Plant Photo" height="100"/></td>
+                <td><img th:src="@{resources/images/dracena.png}" class="img-thumbnail" alt="Plant Photo" height="100"/></td>
 
                 <td th:text="${plant.name}" />
                 <td th:text="${plant.caringDescription}" />
                 <td th:text="${plant.bringHomeDate}" />
-                <!--<td class="btn btn-outline-primary btn-sm"  role="button">Watering</td>-->
 
 
             </tr>
