@@ -1,6 +1,14 @@
-# Spring Boot Watering Planner Application
+# Watering Planner Application
 
-![.images/WateringPlantApp.png](.images/WateringPlantApp.png)
+[.images/WateringPlanerApplication.png] (.images/WateringPlanerApplication.png)
+
+## Auhors:
+* Paweł Kijaczko, Seweryn Kreft
+
+## Tools:
+
+
+
 
 # Work in progress ;)
 
