@@ -14,6 +14,7 @@ public class Plant {
     private String species;
     private String name;
     private String caringDescription;
+    private LocalDate bringHomeDate;
     private LocalDate wateringDate;
     private LocalDate lastWatering;
     private LocalDate nextWatering;
