@@ -24,5 +24,35 @@
     </ul>
 
   </div>
+  <div class="MainPage" >
+    <table class="table  table-striped">
+      <!--<thead class="table-dark bg-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Flower Name</th>
+        <th scope="col">Watering Level</th>
+        <th scope="col">Last Watering</th>
+        <th scope="col">Next Watering Date</th>
+        &lt;!&ndash;        <th scope="col">Watering Date</th>&ndash;&gt;
+        &lt;!&ndash;        <th class="btn btn-light"  role="button">Watering</th>&ndash;&gt;
+        <th scope="col">Watering It!</th>
+      </tr>
+      </thead>-->
+
+      <tbody class="table-info">
+      <tr th:each="plant: ${plants}">
+        <td th:text="${plant.id}"/>
+        <td th:text="${plant.name}" />
+        <td>'HI_LOW_ICON'</td>
+        <td th:text="${plant.lastWatering}" />
+        <td th:text="${plant.nextWatering}" />
+        <td class="btn btn-outline-primary btn-sm"  role="button">Watering</td>
+
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
