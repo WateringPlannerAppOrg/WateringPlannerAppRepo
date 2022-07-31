@@ -20,7 +20,7 @@ public class PlantServiceInMemory implements PlantService {
                 "mało 2 w tyg.",
                 LocalDate.of(2020, 12, 24), LocalDate.of(2022,07,22),LocalDate.of(2022,07,24),false
         ));
-        plants.add(new Plant(3, "Katus", "mały Kaktus",
+        plants.add(new Plant(3, "Lobivia", "mały Kaktus",
                 "mało 1 w tyg.",
                 LocalDate.of(2022,07,13), LocalDate.of(2022,07,24),LocalDate.of(2022,07,29),false
         ));

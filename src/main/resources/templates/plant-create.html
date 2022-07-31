@@ -22,31 +22,33 @@
         <a class="nav-link " th:href="@{/plants/create}" tabindex="-1">Plant Management</a>
       </li>
     </ul>
-
+    <div class="title"><h4>Add New Plants</h4> </div>
   </div>
   <div class="MainPage" >
     <table class="table  table-striped">
-      <!--<thead class="table-dark bg-dark">
+      <thead class="table-dark bg-dark">
       <tr>
-        <th scope="col">Id</th>
+        <!--<th scope="col">Id</th>-->
+        <th scope="col">Flower Species</th>
         <th scope="col">Flower Name</th>
+        <th scope="col">Bring Home</th>
         <th scope="col">Watering Level</th>
-        <th scope="col">Last Watering</th>
-        <th scope="col">Next Watering Date</th>
-        &lt;!&ndash;        <th scope="col">Watering Date</th>&ndash;&gt;
-        &lt;!&ndash;        <th class="btn btn-light"  role="button">Watering</th>&ndash;&gt;
-        <th scope="col">Watering It!</th>
+        <th scope="col">Watering frequency</th>
+        <th scope="col">Add Flower</th>
+        <!--<th class="btn btn-light"  role="button">Watering</th>&ndash;&gt;
+        <th scope="col">Watering It!</th>-->
       </tr>
-      </thead>-->
+      </thead>
 
       <tbody class="table-info">
       <tr th:each="plant: ${plants}">
-        <td th:text="${plant.id}"/>
-        <td th:text="${plant.name}" />
-        <td>'HI_LOW_ICON'</td>
-        <td th:text="${plant.lastWatering}" />
-        <td th:text="${plant.nextWatering}" />
-        <td class="btn btn-outline-primary btn-sm"  role="button">Watering</td>
+        <td input type="text" name="Flower Species" th:field="*{species}"/>
+        <td input type ="text" th:field="*{name}" />
+        <td input type = "date" th:field="*{plant.name}" />
+        <!--<td>'HI_LOW_ICON'</td>-->
+        <td input type ="text" name="LEVEL" />
+        <td tinput type = "text" th:text="${plant.nextWatering}" />
+        <td class="btn btn-outline-primary btn-sm"  role="button">ADD</td>
 
 
       </tr>
