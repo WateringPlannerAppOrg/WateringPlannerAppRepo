@@ -14,11 +14,12 @@ public class Plant {
     private String species;
     private String name;
     private String caringDescription;
-    private LocalDate bringHomeDate;
+    private LocalDate wateringDate;
     private LocalDate lastWatering;
     private LocalDate nextWatering;
     boolean wet;
-    public void waterIt() {
-        this.wet = true;
+    public void waterIt() { this.wet = true;
+        this.wateringDate = LocalDate.now();
+
     }
 }

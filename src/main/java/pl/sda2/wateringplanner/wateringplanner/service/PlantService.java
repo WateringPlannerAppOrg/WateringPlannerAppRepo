@@ -19,4 +19,7 @@ public interface PlantService {
     Plant getById(Integer id);
 
     Plant getByName(String flowerName);
+
+    void wateringDate (Integer id);
+
 }

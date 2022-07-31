@@ -29,7 +29,7 @@ public class PlantController {
     }
 
     @GetMapping("/plants/details")
-    public String plantDetal(ModelMap modelMap) {
+    public String plantDetail(ModelMap modelMap) {
         modelMap.addAttribute("plants", plantService.getAll());
         return "plant-details";
     }

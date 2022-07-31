@@ -40,7 +40,6 @@ public class PlantServiceInMemory implements PlantService {
     public void deleteByName(String flowerName) {
         plants.removeIf(p-> p.getName().equals(flowerName));
 
-        // TODO:
     }
 
     @Override
@@ -48,7 +47,7 @@ public class PlantServiceInMemory implements PlantService {
       plants.removeIf(p-> p.getId().equals(id));
 
 
-        // TODO
+
     }
 
     @Override
@@ -56,8 +55,6 @@ public class PlantServiceInMemory implements PlantService {
       plants.stream()
               .filter(p -> p.getId().equals(plantId))
               .forEach(p-> p.waterIt());
-        // TODO: 1. Przeszukać listę i znależc roślinę o id plantId
-        // TODO  2. plant.waterYourself()
 
     }
 
@@ -74,4 +71,14 @@ public class PlantServiceInMemory implements PlantService {
     public Plant getByName(String flowerName) {
         return null;
     }
+    @Override
+    public void wateringDate(Integer id) {
+        plants.stream()
+                .filter(p-> p.getId().equals(id))
+                .findAny()
+                .orElseThrow(IllegalArgumentException::new)
+                .waterIt();
+
+    }
+
 }
